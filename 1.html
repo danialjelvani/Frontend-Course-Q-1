@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: system-ui;
+            color: whitesmoke;
+            background-color: rgb(44, 45, 47);
+        }
+    </style>
+</head>
+<body>
+    <hr> <!--void element-->
+    <!--<html dir="rtl"> <body dir="rtl"> right to left for farsi pages-->
+    <h1 style="font-size: medium;">important but not big</h1>
+    <!--BOLD is for styling but STRONG is important for SEO-->
+    <em>italic but also important for SEO</em>
+    <p>Event will be held on <time datetime="2025-01-30T13:30">Feb 2nd at 1:30 pm</time></p>
+
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>
+          Words can be like X-rays, if you use them properly—they’ll go through
+          anything. You read and you’re pierced.
+        </p>
+    </blockquote>
+        <p>
+        —Aldous Huxley,
+        <br />
+        <cite>Brave New World</cite>
+        </p>
+    <!--the upper cite is not shown but the lower is shown and can be used anywhere 
+    this referencing is also important for SEO-->
+
+    <p>
+        According to Mozilla's website,
+        <q cite="https://www.mozilla.org/en-US/about/history/details/">
+          Firefox 1.0 was released in 2004 and became a big success.
+        </q>
+    </p>
+    <!--this will be a quote with hidden citation-->
+
+    <address>
+        <p>
+          Azadi<br />
+          Tehran<br />
+          Tehran<br />
+          Iran
+        </p>
+
+        <p>Tel: 01234 567 890</p>
+
+        <p>Email: me@quera.org</p>
+    </address>
+    <!--this will be the company address at the bottom of the page-->
+
+    <a href="sun.jpg" download="sun">download Sun photo</a>
+
+    <ol type="1"><li></li></ol>
+    <ol type="a"><li></li></ol>
+    <ol type="A"><li></li></ol>
+    <ol type="i"><li></li></ol>
+    <ol type="I"><li></li></ol>
+    <ol start="5"><li></li></ol>
+
+    <ol reversed>
+        <li>Cat</li>
+        <li>Dog</li>
+        <li>Elephant</li>
+    </ol>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <!-- alt= is used for images as the replacement of image when theres trouble loading the image
+     and its also important for SEO-->
+
+     <!-- always use width & height for images so layout shifting wont happen when loading the page -->
+
+     <img src="bird.jpeg" alt="A Bird" loading="lazy"><br>
+     <!-- loading= its set to eager by default and it loads all the media when loading the page but
+      when its set to lazy it only loads the visible media to the client increasing webpage loading speed-->
+
+    <!-- this will load the image according to its aspect ratio in css
+    img {
+        object-fit: contain; /* or 'cover' depending on the use case */
+    }
+    -->
+
+    <video src="https://video.org/video.mp4" controls>
+        this text is shown if the browser fails to load the video
+    </video><br>
+
+    <video controls width="480px" height="360px">
+        <source src="https://video.org/file_example_MP4_640_3MG.mp4" type="video/mp4">
+        <source src="https://video.org/file_example_MP4_640_3MG.webm" type="video/webm">
+        <source src="https://video.org/file_example_MP4_640_3MG.ogg" type="video/ogg">
+        this text is shown if the browser fails to load the video
+    </video>
+    <!-- this way we provide different video formats for the browser so it chooses the one it can play -->
+
+    <!-- we can use autoplay and muted in the first tag to aoutoplay it muted when the site loads -->
+
+    <!-- we can also use loop & poster="posteraddress.png" & preload(loads b4 downloading the whole video) -->
+
+    <video controls>
+        <source src="https://video.org/file_example_MP4_640_3MG.mp4" type="video/mp4">
+        <track kind="subtitles" src="subtitles_fa.vtt" srclang="fa" label="Farsi">
+        <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+        this text is shown if the browser fails to load the video
+    </video>
+
+    <!-- if we delete the "controls" and use "muted" "loop" "autoplay" the video will play like a gif -->
+
+    <audio controls autoplay muted loop>
+        <source src="https://audio.org/file_example_MP3_700KB.mp3" type="audio/mp3">
+        this text is shown if the browser fails to load the audio
+      </audio><br><br>
+
+    <table border="2" style="border-collapse: collapse">
+        <tr>
+          <th>S.N</th>
+          <th>Item</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Apple</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Mango</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Orange</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>5</td>
+        </tr>
+    </table><br>
+    <!-- colspan -->
+
+    <table border="2" style="border-collapse: collapse">
+      <caption><i>Scores Table</i></caption>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Marks</th>
+        </tr>
+        </thead>
+        <tr>
+          <td rowspan="3">Mark Smith</td>
+          <td>English</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>Maths</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <td>Science</td>
+          <td>91</td>
+        </tr>
+    </table><br><br>
+    <!-- rowspan -->
+
+    <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
+      <div>
+        <label for="file">Choose a file</label>
+        <input type="file" id="file" name="myFile" />
+      </div>
+      <div>
+        <button>Send the file</button>
+      </div>
+    </form><br>
+    <!-- for sending files to the server we always use method=post in order to prevent
+     causing security issues by appending the form /?name=value&name=value ... to the url
+     and also prevent binary codes of files going through HTML which only supports text and
+     its best to use the enctype="multipart/form-data -->
+
+     
+
+
+
+</html>
