@@ -191,7 +191,27 @@
      and also prevent binary codes of files going through HTML which only supports text and
      its best to use the enctype="multipart/form-data -->
 
-     
+    <!-- <button type=""></button> the type= for button can have these attributes:
+      submit -> to submit the form
+      reset -> to clean the inputs
+      button -> to function it using js
+    -->
+
+    <input type="file" id="profile-photo" accept="image/png, image/jpeg"><br><br>
+    <!-- this input with accept= only accepts png & jpeg as image files -->
+
+    <label for="range">Select Value:</label>
+    <input type="range" id="range" value="800" min="100" max="1000" ><br><br>
+    <!-- the value is the default value between min and max when the page loads -->
+
+    <label for="country-choice">Choose a country:</label><br>
+    <input list="country-options" id="country-choice" name="country-choice">
+    <datalist id="country-options">
+      <option value="Australia"></option>
+      <option value="Austria"></option>
+      <option value="America"></option>
+      <option value="Nepal"></option>
+    </datalist><br><br><br><br><br><br><br><br>
 
 
 
